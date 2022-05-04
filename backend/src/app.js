@@ -18,7 +18,9 @@ const app = express();
 //must also use: app.use(cors(corsOptions))
 
 app.set("db", knex);
-app.use(cors());
+app.use(cors({
+    origin: "*",
+}));
 app.use(express.json());
 
 app.use("/movies", moviesRouter);
