@@ -1,0 +1,27 @@
+{
+    "name": "we-love-movies",
+    "version": "1.0.0",
+    "description": "We love movies application",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ChrisDowdDeveloper/Capstone-WeLoveMovies"
+    },
+    "scripts": {
+        "build": "npm -prefix client run build",
+        "preinstall": "cd ./backend && npm install",
+        "install": "cd ./client && npm install",
+        "start": "npx concurrently 'npm run start:backend' 'npm run start:client'",
+        "start:backend": "npm --prefix ./backend start",
+        "start:client": "npm --prefix ./client start",
+        "start:dev": "npx concurrently 'npm run start:dev --prefix ./backend' 'npm start --prefix ./client'",
+        "test": "npm run test:client && npm run test:backend"
+    },
+    "keywords": [],
+    "author": "Chris Dowd",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "knex": "^2.0.0"
+    }
+}
