@@ -9,14 +9,6 @@ const theatersRouter = require("./theaters/theaters.router");
 const reviewsRouter = require("./reviews/reviews.router");
 const app = express();
 
-/*let corsOptions = {
-    origin: 'https://chris-welovemovies-backend.herokuapp.com',
-    optionsSuccessStatus: 200, // For legacy browser support
-    methods: "GET, PUT, DELETE"
-}*/
-//Trying to fix cors issue, got it at this url "https://stackabuse.com/handling-cors-with-node-js/"
-//must also use: app.use(cors(corsOptions))
-
 app.set("db", knex);
 app.use(cors({
     origin: "*",
